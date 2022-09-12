@@ -1,8 +1,9 @@
-<script>
+<script lang="ts">
 	import { Button } from '../components/button';
+	const text:string = "A";
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<Button {text} size="small" variant="none"></Button>
+<Button {text} size="medium" variant="contained" --backgroundColor=#bae8e8></Button>
+<Button {text} size="large" variant="outlined" class = "icon-plus-lite"></Button>
 
-<Button text="ASDF" />
