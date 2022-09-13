@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Button } from '../components/button';
+	import { Button } from '../../components/soy/button';
 	const text: string = 'buttooon';
 </script>
 
