@@ -14,23 +14,22 @@
 		margin: 0.5rem;
 		text-align: center;
 		background-color: transparent;
-		border-radius: 0.5rem;
+		display: inline-block; //button context에 따라 크기 조정
 
 		&[button-size='small'] {
-			width: 1rem;
-			height: 1rem;
-			font-size: 1rem;
-			border-radius: 5px;
+			font-size: 0.8rem;
+			border-radius: 2rem;
+			padding: 0.4rem 0.7rem;
 		}
 		&[button-size='medium'] {
-			width: 2rem;
-			height: 2rem;
-			font-size: 2rem;
+			font-size: 1.4rem;
+			border-radius: 3rem;
+			padding: 0.5rem 1rem;
 		}
 		&[button-size='large'] {
-			width: 3rem;
-			height: 3rem;
-			font-size: 3rem;
+			font-size: 2rem;
+			border-radius: 3rem;
+			padding: 0.5rem 1.3rem;
 		}
 
 		&[button-variant='none'] {
