@@ -59,9 +59,9 @@
 
 <style lang="scss">
 	.content-container {
-		padding: 0 13.5rem 20rem 13.5rem;
-		.main-content {
-			padding-top: 20rem;
-		}
+		max-width: 80vw;
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 20rem;
 	}
 </style>

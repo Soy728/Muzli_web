@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Button } from '@src/components/soy/button';
 	import { SearchBar } from '@src/components/soy/search';
-	const text: string = 'B';
+	const text: string = 'button';
 	const placeholder: string = 'Search on Muzli';
 	const icon: string = '아이콘';
 </script>
@@ -14,7 +14,7 @@
 		<SearchBar {placeholder} {icon} />
 	</div>
 	<div class="right-container">
-		<Button {text} size="medium" variant="outlined" />
+		<Button text="Submit your work" size="medium" variant="outlined" />
 		<Button {text} size="medium" variant="outlined" />
 		<Button {text} size="medium" variant="outlined" />
 		<Button {text} size="medium" variant="outlined" />
@@ -34,6 +34,10 @@
 
 		.search-container {
 			padding: 1.5rem 0rem 0rem 9rem;
+		}
+
+		.right-container {
+			display: flex;
 		}
 	}
 </style>

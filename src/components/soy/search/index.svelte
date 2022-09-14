@@ -16,11 +16,25 @@
 		background-color: #f6f6f7;
 		width: 30vw;
 		height: 4rem;
+		position: relative;
+
+		i {
+			position: absolute;
+		}
 
 		input {
 			border: none;
 			background-color: #f6f6f7;
 			padding-left: 1rem;
+
+			width: 100%;
+			height: 100%;
+
+			&:active,
+			&:focus {
+				border: none;
+				outline: none;
+			}
 		}
 	}
 </style>

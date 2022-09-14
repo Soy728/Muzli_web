@@ -25,7 +25,7 @@
 		margin: 0.5rem;
 		text-align: center;
 		background-color: transparent;
-		display: inline-block; //button context에 따라 크기 조정
+		display: flex;
 
 		&[button-size='small'] {
 			font-size: 0.8rem;
