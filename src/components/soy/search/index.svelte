@@ -10,13 +10,16 @@
 
 <style lang="scss">
 	.searchbar-container {
+		box-sizing: border-box;
 		border-radius: 3rem;
-		padding: 0.5rem 1rem;
-		background-color: white;
-		width: 30rem;
+		padding: 1rem 1rem;
+		background-color: #f6f6f7;
+		width: 30vw;
+		height: 4rem;
 
 		input {
 			border: none;
+			background-color: #f6f6f7;
 		}
 	}
 </style>

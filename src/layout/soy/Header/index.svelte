@@ -23,16 +23,17 @@
 
 <style lang="scss">
 	.header {
-		background-color: aqua;
+		background-color: white;
 		height: 6.5rem;
 		position: fixed;
 		z-index: 1;
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
+		box-shadow: 0 0.1rem 3rem 0 rgb(145 145 145 / 20%);
 
 		.search-container {
-			padding-top: 2rem;
+			padding: 1.5rem 0rem 0rem 9rem;
 		}
 	}
 </style>
