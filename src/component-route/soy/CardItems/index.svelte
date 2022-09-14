@@ -7,7 +7,7 @@
 		<slot />
 	</div>
 {:else}
-	<div class="grid-container">
+	<div class="grid-container" >
 		<slot />
 	</div>
 {/if}

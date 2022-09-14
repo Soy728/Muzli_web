@@ -31,13 +31,18 @@
 		display: flex;
 		justify-content: space-between;
 		box-shadow: 0 0.1rem 3rem 0 rgb(145 145 145 / 20%);
-
+		.logo-container {
+			width: 7.5rem;
+		}
 		.search-container {
-			padding: 1.5rem 0rem 0rem 9rem;
+			width: calc(100% - 37.5rem);
+			max-width: 40rem;
+			// padding: 1.5rem 0rem 0rem 9rem;
 		}
 
 		.right-container {
 			display: flex;
+			width: 30rem;
 		}
 	}
 </style>
