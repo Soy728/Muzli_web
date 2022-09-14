@@ -1,11 +1,22 @@
 <script lang="ts">
+	import { createEventDispatcher, onDestroy, onMount } from 'svelte';
+
 	import type { ButtonSize, ButtonVariant } from '.';
 	export let text: string = '';
 	export let variant: ButtonVariant;
 	export let size: ButtonSize;
+
+	const dispatch = createEventDispatcher<{
+		click: MouseEvent;
+		submit: string;
+	}>(); //generic -> 타입
+
+	function handleClick(event: MouseEvent) {
+		dispatch('click', event);
+	}
 </script>
 
-<div class="button" button-size={size} button-variant={variant}>
+<div class="button" button-size={size} button-variant={variant} on:click={handleClick}>
 	{text}
 </div>
 

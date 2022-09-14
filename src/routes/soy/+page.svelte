@@ -1,9 +1,8 @@
 <script lang="ts">
-	import { Button } from '../../components/soy/button';
-	const text: string = 'buttooon';
+	import { Content } from '@src/layout/soy/Content';
+	import { Header } from '@src/layout/soy/Header';
+	import { CardItems } from '@src/component-route/soy/CardItems';
 </script>
 
-<Button {text} size="small" variant="none" />
-<Button {text} size="small" variant="outlined" />
-<Button {text} size="medium" variant="contained" --backgroundColor="gray" />
-<Button {text} size="large" variant="outlined" />
+<Header />
+<Content />
