@@ -20,6 +20,7 @@
 		input {
 			border: none;
 			background-color: #f6f6f7;
+			padding-left: 1rem;
 		}
 	}
 </style>
