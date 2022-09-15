@@ -2,18 +2,11 @@
 	export let main: boolean = false;
 </script>
 
-{#if main === true}
-	<div class="main-grid-container">
-		<slot />
-	</div>
-{:else}
-	<div class="grid-container" >
-		<slot />
-	</div>
-{/if}
+<div class="grid-container" data-main={main}>
+	<slot />
+</div>
 
 <style lang="scss">
-	.main-grid-container,
 	.grid-container {
 		display: grid;
 		border: solid 1px;
@@ -22,7 +15,7 @@
 		grid-gap: 2rem;
 	}
 
-	:global(.main-grid-container > div:first-child) {
+	:global(.grid-container[data-main='true'] > div:first-child) {
 		grid-column-start: 1;
 		grid-column-end: 3;
 		grid-row-start: 1;

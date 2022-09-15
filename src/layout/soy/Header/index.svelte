@@ -2,8 +2,8 @@
 	import { Button } from '@src/components/soy/button';
 	import { SearchBar } from '@src/components/soy/search';
 	const text: string = 'button';
-	const placeholder: string = 'Search on Muzli';
-	const icon: string = '아이콘';
+	const placeholder: string[] = ['Search on Muzli', 'or Google'];
+	const icon: string = '아';
 </script>
 
 <div class="header">
@@ -11,7 +11,7 @@
 		<Button {text} size="medium" variant="none" />
 	</div>
 	<div class="search-container">
-		<SearchBar {placeholder} {icon} />
+		<SearchBar {placeholder} icon="/soy/asset/icon/search_icon.svg" />
 	</div>
 	<div class="right-container">
 		<Button text="Submit your work" size="medium" variant="outlined" />
@@ -30,14 +30,17 @@
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
+		align-items: center; //가운데 정렬
+
 		box-shadow: 0 0.1rem 3rem 0 rgb(145 145 145 / 20%);
 		.logo-container {
 			width: 7.5rem;
 		}
 		.search-container {
 			width: calc(100% - 37.5rem);
-			max-width: 40rem;
-			// padding: 1.5rem 0rem 0rem 9rem;
+			max-width: 43rem;
+			min-width: 20rem;
+			padding-left: 15vw;
 		}
 
 		.right-container {
