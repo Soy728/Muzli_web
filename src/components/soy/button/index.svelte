@@ -3,6 +3,7 @@
 
 	import type { ButtonSize, ButtonVariant } from '.';
 	export let text: string = '';
+	export let icon: string = '';
 	export let variant: ButtonVariant;
 	export let size: ButtonSize;
 
@@ -12,21 +13,43 @@
 	}>(); //generic -> 타입
 
 	function handleClick(event: MouseEvent) {
-		dispatch('click', event);
+		dispatch('click', event); //dispatch 수정해야됨
 	}
 </script>
 
 <div class="button" button-size={size} button-variant={variant} on:click={handleClick}>
-	{text}
+	{#if icon !== ''}
+		<div class="icon">
+			<img src={icon} alt="" />
+		</div>
+	{/if}
+	{#if text !== ''}
+		<div class="text">
+			{text}
+		</div>
+	{/if}
 </div>
 
 <style lang="scss">
 	.button {
 		margin: 0.5rem;
 		text-align: center;
+		justify-content: center;
 		background-color: transparent;
 		display: flex;
 
+		.icon {
+			padding-top: 0.5rem;
+			height: 1.6rem;
+
+			img {
+				width: 1.6rem;
+				height: 1.6rem;
+			}
+		}
+		.text {
+			padding-top: 0.5rem;
+		}
 		&[button-size='small'] {
 			font-size: 0.8rem;
 			border-radius: 2rem;
@@ -34,11 +57,11 @@
 		}
 		&[button-size='medium'] {
 			font-size: 1.4rem;
-			border-radius: 3rem;
+			border-radius: 2rem;
 			padding: 0.5rem 1rem;
 		}
 		&[button-size='large'] {
-			font-size: 2rem;
+			font-size: 1.8rem;
 			border-radius: 3rem;
 			padding: 0.5rem 1.3rem;
 		}

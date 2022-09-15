@@ -15,11 +15,9 @@
 		flex: 1 0; // 이해안감
 		box-sizing: border-box;
 		border-radius: 3rem;
-		padding: 1rem 1rem;
 		background-color: #f6f6f7;
 		align-items: center;
 		justify-content: center;
-
 		height: 4rem;
 		position: relative;
 
@@ -42,7 +40,7 @@
 			}
 
 			&[data-sub] {
-				right: 1rem;
+				right: 1.5rem;
 				width: 20%;
 				padding-left: 2rem;
 				border-left: solid 0.1rem rgb(231, 231, 231);

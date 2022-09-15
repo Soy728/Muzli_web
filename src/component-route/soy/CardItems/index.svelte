@@ -9,9 +9,8 @@
 <style lang="scss">
 	.grid-container {
 		display: grid;
-		border: solid 1px;
 		grid-template-columns: repeat(4, 1fr);
-
+		grid-template-rows: 26vh 26vh;
 		grid-gap: 2rem;
 	}
 

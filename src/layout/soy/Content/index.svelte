@@ -3,36 +3,31 @@
 	import { Card } from '@src/components/soy/Card';
 	import { Navigation } from '@src/layout/soy/Navigation';
 	let main: boolean = true;
+	let src: string = '';
 </script>
 
 <div class="content-container">
 	<div class="main-content">
 		<CardItems {main}>
-			<Card>
+			<Card img="/soy/asset/image/main.png">
 				<div slot="card-header">Card Name 1</div>
 				<div slot="card-content">Card content 1</div>
-				<div slot="card-footer">Card Footer 1</div>
 			</Card>
-			<Card>
+			<Card img="/soy/asset/image/main.png">
 				<div slot="card-header">Card Name 2</div>
 				<div slot="card-content">Card content 2</div>
-				<div slot="card-footer">Card Footer 2</div>
 			</Card>
-			<Card>
-				>
+			<Card img="/soy/asset/image/main.png">
 				<div slot="card-header">Card Name 3</div>
 				<div slot="card-content">Card content 3</div>
-				<div slot="card-footer">Card Footer 3</div>
 			</Card>
-			<Card>
+			<Card img="/soy/asset/image/main.png">
 				<div slot="card-header">Card Name 4</div>
 				<div slot="card-content">Card content 4</div>
-				<div slot="card-footer">Card Footer 4</div>
 			</Card>
-			<Card>
+			<Card img="/soy/asset/image/main.png">
 				<div slot="card-header">Card Name 5</div>
 				<div slot="card-content">Card content 5</div>
-				<div slot="card-footer">Card Footer 5</div>
 			</Card>
 		</CardItems>
 	</div>
@@ -41,18 +36,14 @@
 	</div>
 	<div class="sub-content">
 		<CardItems>
-			<Card />
-			<Card />
-			<Card />
-			<Card />
-			<Card />
-			<Card />
-			<Card />
-			<Card />
-			<Card />
-			<Card />
-			<Card />
-			<Card />
+			<Card img="/soy/asset/image/main.png" />
+			<Card img="/soy/asset/image/main.png" />
+			<Card img="/soy/asset/image/main.png" />
+			<Card img="/soy/asset/image/main.png" />
+			<Card img="/soy/asset/image/main.png" />
+			<Card img="/soy/asset/image/main.png" />
+			<Card img="/soy/asset/image/main.png" />
+			<Card img="/soy/asset/image/main.png" />
 		</CardItems>
 	</div>
 </div>
@@ -62,6 +53,12 @@
 		max-width: 80vw;
 		margin-left: auto;
 		margin-right: auto;
-		padding-top: 20rem;
+		padding-top: 18rem;
+	}
+	.navigation {
+		padding-top: 5rem;
+	}
+	.sub-content {
+		padding-top: 1rem;
 	}
 </style>

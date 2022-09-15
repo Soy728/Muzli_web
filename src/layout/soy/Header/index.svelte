@@ -3,21 +3,21 @@
 	import { SearchBar } from '@src/components/soy/search';
 	const text: string = 'button';
 	const placeholder: string[] = ['Search on Muzli', 'or Google'];
-	const icon: string = '아';
+	const icon: string = '';
 </script>
 
 <div class="header">
 	<div class="logo-container">
-		<Button {text} size="medium" variant="none" />
+		<Button icon="/soy/asset/icon/muzli_icon.svg" size="medium" variant="none" />
 	</div>
 	<div class="search-container">
 		<SearchBar {placeholder} icon="/soy/asset/icon/search_icon.svg" />
 	</div>
 	<div class="right-container">
 		<Button text="Submit your work" size="medium" variant="outlined" />
-		<Button {text} size="medium" variant="outlined" />
-		<Button {text} size="medium" variant="outlined" />
-		<Button {text} size="medium" variant="outlined" />
+		<Button icon="/soy/asset/icon/bookmark_icon.svg" size="medium" variant="outlined" />
+		<Button icon="/soy/asset/icon/bell_icon.svg" size="medium" variant="outlined" />
+		<Button text="소희" size="medium" variant="contained" --backgroundColor="pink" />
 	</div>
 </div>
 
@@ -35,9 +35,11 @@
 		box-shadow: 0 0.1rem 3rem 0 rgb(145 145 145 / 20%);
 		.logo-container {
 			width: 7.5rem;
+			height: 100%;
+			padding-top: 2rem;
 		}
 		.search-container {
-			width: calc(100% - 37.5rem);
+			width: calc(100% - 42.5rem);
 			max-width: 43rem;
 			min-width: 20rem;
 			padding-left: 15vw;
@@ -45,7 +47,9 @@
 
 		.right-container {
 			display: flex;
-			width: 30rem;
+			width: 32rem;
+			height: 5rem;
+			justify-content: space-between; //내일또보기!
 		}
 	}
 </style>
