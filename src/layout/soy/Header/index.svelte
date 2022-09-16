@@ -27,6 +27,7 @@
 		z-index: 1;
 		width: 100%;
 		display: flex;
+		//왜 안먹는거같지?
 		justify-content: space-between;
 		align-items: center; //가운데 정렬
 
@@ -34,18 +35,18 @@
 		.logo-container {
 			width: 7.5rem;
 			height: 100%;
-			padding-top: 2rem;
+			padding-top: 1rem; //줘도됨????????????//
 		}
 		.search-container {
-			width: calc(100% - 42.5rem);
-			max-width: 43rem;
+			flex: 1 0;
+			max-width: 65rem;
 			min-width: 20rem;
 			padding-left: 15vw;
 		}
 
 		.right-container {
 			display: flex;
-			width: 32rem;
+			width: 30rem;
 			height: 5rem;
 			justify-content: space-between; //내일또보기!
 			flex-wrap: wrap;

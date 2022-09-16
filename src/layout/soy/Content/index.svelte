@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { CardItems } from '@src/component-route/soy/CardItems';
-	import { Card } from '@src/components/soy/Card';
-	import { Navigation } from '@src/layout/soy/Navigation';
+	import { CardItems } from '@src/component-route/soy/cardItems';
+	import { Card } from '@src/components/soy/card';
+	import { Navigation } from '@src/layout/soy/navigation';
 	let main: boolean = true;
 	let src: string = '';
 </script>

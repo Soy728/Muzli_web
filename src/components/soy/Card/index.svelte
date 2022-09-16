@@ -1,7 +1,6 @@
 <script lang="ts">
 	export let img: string = '';
-	import { Sidebar } from '@src/component-route/soy/Sidebar';
-	import { BottomBar } from '@src/component-route/soy/BottomBar';
+	import { Sidebar } from '@src/component-route/soy/sidebar';
 </script>
 
 <div class="card-container">
@@ -11,12 +10,15 @@
 		<Sidebar />
 	</div>
 	<div class="text-container">
-		<slot name="card-header">header</slot>
-		<slot name="card-content">content</slot>
+		<div class="text-header">
+			<slot name="card-header">header</slot>
+		</div>
+		<div class="text-content">
+			<slot name="card-content">content</slot>
+		</div>
 	</div>
-	<!-- <div class="bottom-container">
-		<BottomBar />
-	</div> -->
+
+	<div class="bottom-container">테슷트</div>
 </div>
 
 <style lang="scss">
@@ -49,7 +51,7 @@
 			padding-left: 1rem;
 			padding-bottom: 1rem;
 
-			:global([slot='card-header']) {
+			.text-header {
 				//slot selector로 쓰는 방법 알아두기
 				font-size: 2rem;
 			}

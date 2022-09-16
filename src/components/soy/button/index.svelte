@@ -6,19 +6,10 @@
 	export let icon: string = '';
 	export let variant: ButtonVariant;
 	export let size: ButtonSize;
-
-	const dispatch = createEventDispatcher<{
-		click: MouseEvent;
-		submit: string;
-	}>(); //generic -> 타입
-
-	function handleClick(event: MouseEvent) {
-		dispatch('click', event);
-		alert('Button is clicked');
-	}
+	const dispatch = createEventDispatcher<{ click: MouseEvent }>(); //generic -> 타입
 </script>
 
-<div class="button" button-size={size} button-variant={variant} on:click={handleClick}>
+<div class="button" data-size={size} data-variant={variant} on:click={(e) => dispatch('click', e)}>
 	{#if icon !== ''}
 		<div class="icon">
 			<img src={icon} alt="" />
@@ -34,47 +25,50 @@
 <style lang="scss">
 	.button {
 		margin: 0.5rem;
-		text-align: center;
+		align-items: center;
 		justify-content: center;
 		background-color: transparent;
 		display: flex;
+		min-width: 4rem; //동그래짐!!!!! 편안 그 잡채
+		min-height: 4rem;
+		cursor: pointer;
 
+		&:hover {
+			background: rgba(0, 0, 0, 0.1);
+		}
 		.icon {
 			padding-top: 0.5rem;
-			height: 1.6rem;
 
 			img {
 				width: 1.6rem;
 				height: 1.6rem;
 			}
 		}
-		.text {
-			padding-top: 0.5rem;
-		}
-		&[button-size='small'] {
+
+		&[data-size='small'] {
 			font-size: 0.8rem;
 			border-radius: 2rem;
 			padding: 0.4rem 0.7rem;
 		}
-		&[button-size='medium'] {
+		&[data-size='medium'] {
 			font-size: 1.4rem;
 			border-radius: 2rem;
 			padding: 0.5rem 1rem;
 		}
-		&[button-size='large'] {
+		&[data-size='large'] {
 			font-size: 1.8rem;
 			border-radius: 3rem;
 			padding: 0.5rem 1.3rem;
 		}
 
-		&[button-variant='none'] {
+		&[data-variant='none'] {
 			border: 0;
 		}
-		&[button-variant='contained'] {
+		&[data-variant='contained'] {
 			border: 0;
 			background-color: var(--backgroundColor);
 		}
-		&[button-variant='outlined'] {
+		&[data-variant='outlined'] {
 			border: 0.05rem solid rgb(83, 83, 83, 0.4);
 		}
 	}

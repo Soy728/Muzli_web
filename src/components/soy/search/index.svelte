@@ -6,6 +6,7 @@
 <div class="searchbar-container">
 	<img class="icon-search" src={icon} alt="" />
 	<input type="text" placeholder={placeholder[0]} data-main />
+	<div class="bar" />
 	<input type="text" placeholder={placeholder[1]} data-sub />
 </div>
 
@@ -27,23 +28,21 @@
 			width: 1.5rem;
 			opacity: 0.3;
 		}
-
+		.bar {
+			background-color: rgba(0, 0, 0, 0.2);
+			width: 0.1rem;
+			height: 50%;
+		}
 		input {
-			position: absolute;
 			border: none;
 			background-color: #f6f6f7;
-			height: 90%; // 100%적용하면 삐져나옴..
-
+			height: 100%;
+			padding-left: 1rem;
 			&[data-main] {
-				left: 3.5rem;
 				width: 60%;
 			}
-
 			&[data-sub] {
-				right: 1.5rem;
 				width: 20%;
-				padding-left: 2rem;
-				border-left: solid 0.1rem rgb(231, 231, 231);
 			}
 			&:active,
 			&:focus {
