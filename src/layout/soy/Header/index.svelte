@@ -1,9 +1,7 @@
 <script lang="ts">
 	import { Button } from '@src/components/soy/button';
 	import { SearchBar } from '@src/components/soy/search';
-	const text: string = 'button';
 	const placeholder: string[] = ['Search on Muzli', 'or Google'];
-	const icon: string = '';
 </script>
 
 <div class="header">
@@ -50,6 +48,7 @@
 			width: 32rem;
 			height: 5rem;
 			justify-content: space-between; //내일또보기!
+			flex-wrap: wrap;
 		}
 	}
 </style>

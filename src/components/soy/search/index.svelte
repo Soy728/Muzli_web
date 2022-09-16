@@ -32,7 +32,7 @@
 			position: absolute;
 			border: none;
 			background-color: #f6f6f7;
-			height: 100%;
+			height: 90%; // 100%적용하면 삐져나옴..
 
 			&[data-main] {
 				left: 3.5rem;

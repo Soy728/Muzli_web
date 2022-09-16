@@ -1,9 +1,11 @@
 <script lang="ts">
 	export let img: string = '';
 	import { Sidebar } from '@src/component-route/soy/Sidebar';
+	import { BottomBar } from '@src/component-route/soy/BottomBar';
 </script>
 
 <div class="card-container">
+	<!-- <div class="image" style="background-image:url({img})" /> -->
 	<img src={img} alt="" />
 	<div class="sidebar-container">
 		<Sidebar />
@@ -12,6 +14,9 @@
 		<slot name="card-header">header</slot>
 		<slot name="card-content">content</slot>
 	</div>
+	<!-- <div class="bottom-container">
+		<BottomBar />
+	</div> -->
 </div>
 
 <style lang="scss">
@@ -30,6 +35,7 @@
 		&:hover .sidebar-container {
 			visibility: visible;
 		}
+
 		img {
 			width: 100%;
 			height: 100%;

@@ -13,7 +13,8 @@
 	}>(); //generic -> 타입
 
 	function handleClick(event: MouseEvent) {
-		dispatch('click', event); //dispatch 수정해야됨
+		dispatch('click', event);
+		alert('Button is clicked');
 	}
 </script>
 
