@@ -4,25 +4,25 @@
 
 <div class="sidebar-container">
 	<Button
-		icon="/soy/asset/icon/muzli_icon.svg"
+		style="background-image:url(/soy/asset/icon/muzli_icon.svg);"
 		size="small"
 		variant="contained"
 		--backgroundColor="white"
 	/>
 	<Button
-		icon="/soy/asset/icon/muzli_icon.svg"
+		style="background-image:url(/soy/asset/icon/muzli_icon.svg);"
 		size="small"
 		variant="contained"
 		--backgroundColor="white"
 	/>
 	<Button
-		icon="/soy/asset/icon/muzli_icon.svg"
+		style="background-image:url(/soy/asset/icon/muzli_icon.svg);"
 		size="small"
 		variant="contained"
 		--backgroundColor="white"
 	/>
 	<Button
-		icon="/soy/asset/icon/muzli_icon.svg"
+		style="background-image:url(/soy/asset/icon/muzli_icon.svg);"
 		size="small"
 		variant="contained"
 		--backgroundColor="white"

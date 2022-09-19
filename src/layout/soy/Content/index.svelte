@@ -2,30 +2,32 @@
 	import { CardItems } from '@src/component-route/soy/cardItems';
 	import { Card } from '@src/components/soy/card';
 	import { Navigation } from '@src/layout/soy/navigation';
+	import { Button } from '@src/components/soy/button';
 	let main: boolean = true;
-	let src: string = '';
+	let shared: string = '0';
+	let watched: string = '0';
 </script>
 
 <div class="content-container">
 	<div class="main-content">
 		<CardItems {main}>
-			<Card img="/soy/asset/image/main.png">
+			<Card style="background-image:url(/soy/asset/image/main.png);" watched="1.3" shared="100">
 				<div slot="card-header">Card Name 1</div>
 				<div slot="card-content">Card content 1</div>
 			</Card>
-			<Card img="/soy/asset/image/main.png">
+			<Card style="background-image:url(/soy/asset/image/main.png);" watched="1.3" shared="100">
 				<div slot="card-header">Card Name 2</div>
 				<div slot="card-content">Card content 2</div>
 			</Card>
-			<Card img="/soy/asset/image/main.png">
+			<Card style="background-image:url(/soy/asset/image/main.png);">
 				<div slot="card-header">Card Name 3</div>
 				<div slot="card-content">Card content 3</div>
 			</Card>
-			<Card img="/soy/asset/image/main.png">
+			<Card style="background-image:url(/soy/asset/image/main.png);">
 				<div slot="card-header">Card Name 4</div>
 				<div slot="card-content">Card content 4</div>
 			</Card>
-			<Card img="/soy/asset/image/main.png">
+			<Card style="background-image:url(/soy/asset/image/main.png);">
 				<div slot="card-header">Card Name 5</div>
 				<div slot="card-content">Card content 5</div>
 			</Card>
@@ -36,21 +38,21 @@
 	</div>
 	<div class="sub-content">
 		<CardItems>
-			<Card img="/soy/asset/image/main.png" />
-			<Card img="/soy/asset/image/main.png" />
-			<Card img="/soy/asset/image/main.png" />
-			<Card img="/soy/asset/image/main.png" />
-			<Card img="/soy/asset/image/main.png" />
-			<Card img="/soy/asset/image/main.png" />
-			<Card img="/soy/asset/image/main.png" />
-			<Card img="/soy/asset/image/main.png" />
+			<Card style="background-image:url(/soy/asset/image/main.png);" />
+			<Card style="background-image:url(/soy/asset/image/main.png);" />
+			<Card style="background-image:url(/soy/asset/image/main.png);" />
+			<Card style="background-image:url(/soy/asset/image/main.png);" />
+			<Card style="background-image:url(/soy/asset/image/main.png);" />
+			<Card style="background-image:url(/soy/asset/image/main.png);" />
+			<Card style="background-image:url(/soy/asset/image/main.png);" />
+			<Card style="background-image:url(/soy/asset/image/main.png);" />
 		</CardItems>
 	</div>
 </div>
 
 <style lang="scss">
 	.content-container {
-		max-width: 80vw;
+		max-width: 115rem;
 		margin-left: auto;
 		margin-right: auto;
 		padding-top: 18rem;

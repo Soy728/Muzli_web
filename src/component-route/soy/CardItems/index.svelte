@@ -10,7 +10,7 @@
 	.grid-container {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
-		grid-template-rows: 26vh 26vh;
+		grid-template-rows: 20rem 20rem;
 		grid-gap: 2rem;
 	}
 

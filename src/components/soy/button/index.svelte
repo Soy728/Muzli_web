@@ -3,18 +3,19 @@
 
 	import type { ButtonSize, ButtonVariant } from '.';
 	export let text: string = '';
-	export let icon: string = '';
 	export let variant: ButtonVariant;
 	export let size: ButtonSize;
+	export let style: string = '';
 	const dispatch = createEventDispatcher<{ click: MouseEvent }>(); //generic -> 타입
 </script>
 
-<div class="button" data-size={size} data-variant={variant} on:click={(e) => dispatch('click', e)}>
-	{#if icon !== ''}
-		<div class="icon">
-			<img src={icon} alt="" />
-		</div>
-	{/if}
+<div
+	class="button"
+	{style}
+	data-size={size}
+	data-variant={variant}
+	on:click={(e) => dispatch('click', e)}
+>
 	{#if text !== ''}
 		<div class="text">
 			{text}
@@ -25,28 +26,26 @@
 <style lang="scss">
 	.button {
 		margin: 0.5rem;
-		align-items: center;
+		align-items: center; //가운데 토마토
 		justify-content: center;
 		background-color: transparent;
 		display: flex;
 		min-width: 4rem; //동그래짐!!!!! 편안 그 잡채
 		min-height: 4rem;
 		cursor: pointer;
+		background-size: 1.6rem;
+		background-repeat: no-repeat;
+		background-position: center;
 
 		&:hover {
-			background: rgba(0, 0, 0, 0.1);
-		}
-		.icon {
-			padding-top: 0.5rem;
-
-			img {
-				width: 1.6rem;
-				height: 1.6rem;
-			}
+			opacity: 50%;
 		}
 
 		&[data-size='small'] {
+			min-width: 2.5rem;
+			min-height: 2.5rem;
 			font-size: 0.8rem;
+			background-size: 1.3rem;
 			border-radius: 2rem;
 			padding: 0.4rem 0.7rem;
 		}

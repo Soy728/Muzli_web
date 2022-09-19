@@ -6,15 +6,27 @@
 
 <div class="header">
 	<div class="logo-container">
-		<Button icon="/soy/asset/icon/muzli_icon.svg" size="medium" variant="none" />
+		<Button
+			style="background-image:url(/soy/asset/icon/muzli_icon.svg);"
+			size="medium"
+			variant="none"
+		/>
 	</div>
 	<div class="search-container">
 		<SearchBar {placeholder} icon="/soy/asset/icon/search_icon.svg" />
 	</div>
 	<div class="right-container">
 		<Button text="Submit your work" size="medium" variant="outlined" />
-		<Button icon="/soy/asset/icon/bookmark_icon.svg" size="medium" variant="outlined" />
-		<Button icon="/soy/asset/icon/bell_icon.svg" size="medium" variant="outlined" />
+		<Button
+			style="background-image:url(/soy/asset/icon/muzli_icon.svg);"
+			size="medium"
+			variant="outlined"
+		/>
+		<Button
+			style="background-image:url(/soy/asset/icon/muzli_icon.svg);"
+			size="medium"
+			variant="outlined"
+		/>
 		<Button text="소희" size="medium" variant="contained" --backgroundColor="pink" />
 	</div>
 </div>

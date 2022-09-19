@@ -1,59 +1,119 @@
 <script lang="ts">
-	export let img: string = '';
+	export let style: string = '';
 	import { Sidebar } from '@src/component-route/soy/sidebar';
+	import { Button } from '@src/components/soy/button';
+	export let watched: string = '0';
+	export let shared: string = '0';
 </script>
 
-<div class="card-container">
-	<!-- <div class="image" style="background-image:url({img})" /> -->
-	<img src={img} alt="" />
+<div class="card-container" {style}>
 	<div class="sidebar-container">
 		<Sidebar />
 	</div>
-	<div class="text-container">
-		<div class="text-header">
-			<slot name="card-header">header</slot>
+	<div class="content-container">
+		<div class="text-container">
+			<div class="text-header">
+				<slot name="card-header">header</slot>
+			</div>
+			<div class="text-content">
+				<slot name="card-content">content</slot>
+			</div>
 		</div>
-		<div class="text-content">
-			<slot name="card-content">content</slot>
+
+		<div class="bottom-container">
+			<div class="bottom-Lcontainer">
+				<Button
+					style="background-image:url(/soy/asset/icon/muzli_icon.svg);"
+					size="small"
+					variant="contained"
+					--backgroundColor="white"
+				/>
+				<Button
+					style="background-image:url(/soy/asset/icon/muzli_icon.svg);"
+					size="small"
+					variant="contained"
+					--backgroundColor="white"
+				/>
+			</div>
+			<div class="bottom-Rcontainer">
+				<div class="watched">
+					{watched}K
+				</div>
+				<div class="shared">
+					{shared}
+				</div>
+			</div>
 		</div>
 	</div>
-
-	<div class="bottom-container">테슷트</div>
 </div>
 
 <style lang="scss">
+	$bottom-content: 6rem; //bottom content의 height
 	.card-container {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
 		width: 100%;
 		height: 100%;
 		position: relative;
-		//border-radius: 50%; //border-radius가 먹질 않음.
+		border-radius: 1rem;
+		overflow: hidden;
 		.sidebar-container {
 			position: absolute;
 			top: 0;
 			right: 0;
-			visibility: hidden;
+			opacity: 0;
+			z-index: 1;
 		}
 
-		&:hover .sidebar-container {
-			visibility: visible;
+		&:hover .sidebar-container,
+		.bottom-container {
+			opacity: 100%;
+			transition: 0.5s;
 		}
 
-		img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
+		&:hover .content-container {
+			bottom: $bottom-content;
+			transition: 0.5s;
 		}
-
-		.text-container {
+		.content-container {
 			position: absolute;
 			bottom: 0;
-			color: white;
-			padding-left: 1rem;
-			padding-bottom: 1rem;
+			width: 100%;
+			.text-container {
+				color: white;
+				padding-left: 1rem;
+				padding-bottom: 1rem;
+				.text-header {
+					font-size: 2rem;
+				}
+			}
+			.bottom-container {
+				display: flex;
+				flex-direction: row;
+				width: 100%;
+				height: $bottom-content;
+				background-color: rgba(0, 0, 0, 0.3);
+				position: absolute;
+				bottom: -$bottom-content;
+				align-items: center;
 
-			.text-header {
-				//slot selector로 쓰는 방법 알아두기
-				font-size: 2rem;
+				.bottom-Lcontainer {
+					display: flex;
+					position: absolute;
+					padding-left: 1rem;
+				}
+
+				.bottom-Rcontainer {
+					display: flex;
+					position: absolute;
+					right: 1rem;
+					color: white;
+
+					.shared {
+						padding-left: 1rem;
+					}
+				}
 			}
 		}
 	}
