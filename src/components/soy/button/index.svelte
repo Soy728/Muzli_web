@@ -32,6 +32,7 @@
 		display: flex;
 		min-width: 4rem; //동그래짐!!!!! 편안 그 잡채
 		min-height: 4rem;
+
 		cursor: pointer;
 		background-size: 1.6rem;
 		background-repeat: no-repeat;
@@ -45,6 +46,7 @@
 			min-width: 2.5rem;
 			min-height: 2.5rem;
 			font-size: 0.8rem;
+			height: 2.5rem;
 			background-size: 1.3rem;
 			border-radius: 2rem;
 			padding: 0.4rem 0.7rem;
@@ -52,6 +54,7 @@
 		&[data-size='medium'] {
 			font-size: 1.4rem;
 			border-radius: 2rem;
+			height: 4rem;
 			background-size: 1.6rem;
 			padding: 0.5rem 1rem;
 		}
@@ -67,7 +70,6 @@
 		}
 		&[data-variant='contained'] {
 			border: 0;
-			background-color: var(--backgroundColor);
 		}
 		&[data-variant='outlined'] {
 			border: 0.05rem solid rgb(83, 83, 83, 0.4);

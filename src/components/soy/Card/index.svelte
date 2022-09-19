@@ -23,16 +23,14 @@
 		<div class="bottom-container">
 			<div class="bottom-Lcontainer">
 				<Button
-					style="background-image:url(/soy/asset/icon/muzli_icon.svg);"
+					style="background-image:url(/soy/asset/icon/muzli_icon.svg); background-color:white"
 					size="small"
 					variant="contained"
-					--backgroundColor="white"
 				/>
 				<Button
-					style="background-image:url(/soy/asset/icon/muzli_icon.svg);"
+					style="background-image:url(/soy/asset/icon/muzli_icon.svg); background-color:white"
 					size="small"
 					variant="contained"
-					--backgroundColor="white"
 				/>
 			</div>
 			<div class="bottom-Rcontainer">

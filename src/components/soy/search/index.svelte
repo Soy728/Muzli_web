@@ -13,13 +13,14 @@
 <style lang="scss">
 	.searchbar-container {
 		display: flex; //이해안감
-		flex: 1 0; // 이해안감
 		box-sizing: border-box;
 		border-radius: 3rem;
 		background-color: #f6f6f7;
 		align-items: center;
 		justify-content: center;
 		height: 4rem;
+		width: 100%;
+		max-width: 45rem;
 		position: relative;
 
 		.icon-search {

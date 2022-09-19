@@ -7,11 +7,10 @@
 <div class="header">
 	<div class="logo-container">
 		<Button
-			style="background-image:url(/soy/asset/icon/muzli_icon.svg);"
+			style="background-image:url(/soy/asset/icon/muzli_icon.svg); width:100%"
 			size="large"
 			variant="none"
 		/>
-		<div class="line" />
 	</div>
 
 	<div class="search-container">
@@ -29,7 +28,7 @@
 			size="medium"
 			variant="outlined"
 		/>
-		<Button text="소희" size="medium" variant="contained" --backgroundColor="pink" />
+		<Button text="소희" size="medium" variant="contained" style="background-color:pink" />
 	</div>
 </div>
 
@@ -42,36 +41,33 @@
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
-		align-items: center; //가운데 정렬
-
+		align-items: center;
 		box-shadow: 0 0.1rem 3rem 0 rgb(145 145 145 / 20%);
+
 		.logo-container {
 			display: flex;
-			width: 9rem;
+			width: 7.5rem;
 			height: 100%;
-			padding: 0rem 1rem;
-
-			.line {
-				margin-left: 1rem;
-				background-color: rgba(0, 0, 0, 0.1);
-				width: 0.1rem;
-				height: 100%;
-			}
+			border-right: solid 0.1px rgba(0, 0, 0, 0.2);
 		}
 
 		.search-container {
+			display: flex;
 			flex: 1 0;
-			max-width: 65rem;
 			min-width: 20rem;
-			padding-left: 20rem;
+			justify-content: center;
+			height: 100%;
+			align-items: center;
+			padding-left: 23rem;
 		}
 
 		.right-container {
 			display: flex;
-			width: 30rem;
-			height: 5rem;
-			justify-content: space-between; //내일또보기!
+			width: 29rem;
+			height: 100%;
+			justify-content: space-between;
 			flex-wrap: wrap;
+			align-items: center;
 		}
 	}
 </style>
