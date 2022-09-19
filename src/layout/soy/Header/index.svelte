@@ -8,10 +8,12 @@
 	<div class="logo-container">
 		<Button
 			style="background-image:url(/soy/asset/icon/muzli_icon.svg);"
-			size="medium"
+			size="large"
 			variant="none"
 		/>
+		<div class="line" />
 	</div>
+
 	<div class="search-container">
 		<SearchBar {placeholder} icon="/soy/asset/icon/search_icon.svg" />
 	</div>
@@ -39,21 +41,29 @@
 		z-index: 1;
 		width: 100%;
 		display: flex;
-		//왜 안먹는거같지?
 		justify-content: space-between;
 		align-items: center; //가운데 정렬
 
 		box-shadow: 0 0.1rem 3rem 0 rgb(145 145 145 / 20%);
 		.logo-container {
-			width: 7.5rem;
+			display: flex;
+			width: 9rem;
 			height: 100%;
-			padding-top: 1rem; //줘도됨????????????//
+			padding: 0rem 1rem;
+
+			.line {
+				margin-left: 1rem;
+				background-color: rgba(0, 0, 0, 0.1);
+				width: 0.1rem;
+				height: 100%;
+			}
 		}
+
 		.search-container {
 			flex: 1 0;
 			max-width: 65rem;
 			min-width: 20rem;
-			padding-left: 15vw;
+			padding-left: 20rem;
 		}
 
 		.right-container {

@@ -6,7 +6,7 @@
 <div class="searchbar-container">
 	<img class="icon-search" src={icon} alt="" />
 	<input type="text" placeholder={placeholder[0]} data-main />
-	<div class="bar" />
+	<div class="line" />
 	<input type="text" placeholder={placeholder[1]} data-sub />
 </div>
 
@@ -28,7 +28,7 @@
 			width: 1.5rem;
 			opacity: 0.3;
 		}
-		.bar {
+		.line {
 			background-color: rgba(0, 0, 0, 0.2);
 			width: 0.1rem;
 			height: 50%;

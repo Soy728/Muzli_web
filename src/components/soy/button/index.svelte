@@ -52,12 +52,14 @@
 		&[data-size='medium'] {
 			font-size: 1.4rem;
 			border-radius: 2rem;
+			background-size: 1.6rem;
 			padding: 0.5rem 1rem;
 		}
 		&[data-size='large'] {
 			font-size: 1.8rem;
 			border-radius: 3rem;
-			padding: 0.5rem 1.3rem;
+			background-size: 2.5rem;
+			padding: 0.5rem 1.5rem;
 		}
 
 		&[data-variant='none'] {

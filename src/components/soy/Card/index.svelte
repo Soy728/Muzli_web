@@ -64,26 +64,27 @@
 			right: 0;
 			opacity: 0;
 			z-index: 1;
+			transition: 0.5s;
 		}
 
 		&:hover .sidebar-container,
 		.bottom-container {
 			opacity: 100%;
-			transition: 0.5s;
 		}
 
 		&:hover .content-container {
 			bottom: $bottom-content;
-			transition: 0.5s;
 		}
 		.content-container {
 			position: absolute;
 			bottom: 0;
 			width: 100%;
+			transition: bottom 0.5s;
 			.text-container {
 				color: white;
 				padding-left: 1rem;
 				padding-bottom: 1rem;
+
 				.text-header {
 					font-size: 2rem;
 				}
@@ -97,6 +98,7 @@
 				position: absolute;
 				bottom: -$bottom-content;
 				align-items: center;
+				transition: bottom 0.5s, opacity 0.5s;
 
 				.bottom-Lcontainer {
 					display: flex;
