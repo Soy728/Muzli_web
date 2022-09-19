@@ -15,7 +15,7 @@
 				<div slot="card-header">Card Name 1</div>
 				<div slot="card-content">Card content 1</div>
 			</Card>
-			<Card style="background-image:url(/soy/asset/image/main.png);" watched="1.3" shared="100">
+			<Card style="background-image:url(/soy/asset/image/main.png);" watched="2.5" shared="250">
 				<div slot="card-header">Card Name 2</div>
 				<div slot="card-content">Card content 2</div>
 			</Card>
@@ -48,6 +48,7 @@
 			<Card style="background-image:url(/soy/asset/image/main.png);" />
 		</CardItems>
 	</div>
+	<div class="footer-container" />
 </div>
 
 <style lang="scss">
@@ -56,11 +57,16 @@
 		margin-left: auto;
 		margin-right: auto;
 		padding-top: 18rem;
-	}
-	.navigation {
-		padding-top: 5rem;
-	}
-	.sub-content {
-		padding-top: 1rem;
+
+		.navigation {
+			padding-top: 5rem;
+		}
+		.sub-content {
+			padding-top: 1rem;
+		}
+
+		.footer-container {
+			height: 10rem;
+		}
 	}
 </style>
