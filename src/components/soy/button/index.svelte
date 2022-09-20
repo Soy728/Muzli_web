@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { createEventDispatcher, onDestroy, onMount } from 'svelte';
+	import { createEventDispatcher } from 'svelte';
 
 	import type { ButtonSize, ButtonVariant } from '.';
 	export let text: string = '';
