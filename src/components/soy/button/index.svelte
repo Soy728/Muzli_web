@@ -6,7 +6,7 @@
 	export let variant: ButtonVariant;
 	export let size: ButtonSize;
 	export let style: string = '';
-	const dispatch = createEventDispatcher<{ click: MouseEvent }>(); //generic -> 타입
+	const dispatch = createEventDispatcher<{ click: MouseEvent }>();
 </script>
 
 <div
@@ -26,11 +26,11 @@
 <style lang="scss">
 	.button {
 		margin: 0.5rem;
-		align-items: center; //가운데 토마토
+		align-items: center;
 		justify-content: center;
 		background-color: transparent;
 		display: flex;
-		min-width: 4rem; //동그래짐!!!!! 편안 그 잡채
+		min-width: 4rem;
 		min-height: 4rem;
 
 		cursor: pointer;

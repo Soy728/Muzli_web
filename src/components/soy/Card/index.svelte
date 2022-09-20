@@ -21,7 +21,7 @@
 		</div>
 
 		<div class="bottom-container">
-			<div class="bottom-Lcontainer">
+			<div class="bottom-left-container">
 				<Button
 					style="background-image:url(/soy/asset/icon/muzli_icon.svg); background-color:white"
 					size="small"
@@ -33,7 +33,7 @@
 					variant="contained"
 				/>
 			</div>
-			<div class="bottom-Rcontainer">
+			<div class="bottom-right-container">
 				<div class="watched">
 					{watched}K
 				</div>
@@ -62,7 +62,7 @@
 			right: 0;
 			opacity: 0;
 			z-index: 1;
-			transition: 0.5s;
+			transition: opacity 0.5s;
 		}
 
 		&:hover .sidebar-container,
@@ -98,13 +98,13 @@
 				align-items: center;
 				transition: bottom 0.5s, opacity 0.5s;
 
-				.bottom-Lcontainer {
+				.bottom-left-container {
 					display: flex;
 					position: absolute;
 					padding-left: 1rem;
 				}
 
-				.bottom-Rcontainer {
+				.bottom-right-container {
 					display: flex;
 					position: absolute;
 					right: 1rem;

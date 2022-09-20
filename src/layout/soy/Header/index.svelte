@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { Button } from '@src/components/soy/button';
 	import { SearchBar } from '@src/components/soy/search';
-	const placeholder: string[] = ['Search on Muzli', 'or Google'];
 </script>
 
 <div class="header">
@@ -14,7 +13,10 @@
 	</div>
 
 	<div class="search-container">
-		<SearchBar {placeholder} icon="/soy/asset/icon/search_icon.svg" />
+		<SearchBar
+			placeholder={['Search on Muzli', 'or Google']}
+			icon="/soy/asset/icon/search_icon.svg"
+		/>
 	</div>
 	<div class="right-container">
 		<Button text="Submit your work" size="medium" variant="outlined" />
