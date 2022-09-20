@@ -52,7 +52,6 @@
 			height: 100%;
 			border-right: solid 0.1px rgba(0, 0, 0, 0.2);
 		}
-
 		.search-container {
 			display: flex;
 			flex: 1 0;
